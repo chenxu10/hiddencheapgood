@@ -10,6 +10,7 @@
 目前的过滤指标是ROIC与PB。计算工具是未来现金流折现。
 
 ## Quick Start
+### DCF Tools
 ```bash
 chmod +x dcf_valuation.sh ./dcf_valuation.sh
 ```
@@ -25,13 +26,14 @@ It will output:
 - 国债收益率: 4.5%
 - 年金现值因子: 16.2889
 - 折现后的DCF价值: 130.82
-
+### ROIC绘图
 ```python
 rc.plot_roic_time_series("OXY", 4)
 ```
 It will output four year rolling average roic
 
 <a name="english"></a>
-# JiaGuoSuiShang
+
+# GuiChuJianQu
 
 This repo builds sharp swiss tools to do Charlie and Buffet style value investing.

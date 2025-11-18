@@ -23,9 +23,6 @@ def test_calculate_nopat():
     expected_nopat = operating_income * (1 - 0)  # 1000 * 1 = 1000
     assert rc.calculate_nopat(operating_income, tax_expense, pretax_income) == expected_nopat
 
-
-
 if __name__ == "__main__":
-    #print(rc.calculate_roic("MRNA"))
     #pprint(rc.calculate_roic_multi_year("MRNA",4))
-    rc.plot_roic_time_series("DECK", 4)
+    rc.plot_roic_time_series("OXY", 4)

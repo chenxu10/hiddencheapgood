@@ -6,7 +6,6 @@ and low p/b
 
 Author: xu.shen<xs286@cornell.edu>
 
-TODO: The BRKB's calculation is not correct and needs to modify
 """
 
 import pandas as pd

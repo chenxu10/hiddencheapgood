@@ -9,6 +9,7 @@ logger = logging.getLogger(__name__)
 
 def get_financial_statements(ticker: str) -> Tuple[Any, Any]:
     stock = yf.Ticker(ticker)
+    instru_hist = stock.history(start='2024-02-01', end='2024-05-01')
     balance_sheet = stock.balance_sheet
     income_statement = stock.financials
     return balance_sheet, income_statement
@@ -229,13 +230,16 @@ def plot_roic_time_series(ticker: str, years: int = 4, save_plot: bool = False) 
     log_summary_statistics(ticker, roic_clean, mean_roic, std_roic)
 
 if __name__ == "__main__":
+    # Output balancesheet
+    # balance_sheet, income_statement = get_financial_statements("PDD")
+    # balance_sheet.to_csv("src/report/pdd_balance_sheet.csv") 
+    # income_statement.to_csv("src/report/income_statement.csv")
+    # print(balance_sheet)
+    
+    # Output ROIC
     logger.info("Single year ROIC calculation:")
-    logger.info(calculate_roic("UNH"))
+    logger.info(calculate_roic("T"))
     logger.info("Multi-year ROIC calculation:")
-    result = calculate_roic_multi_year("UNH", 4)
+    result = calculate_roic_multi_year("T", 4)
     logger.info(result)
-    # for data in result['roic_data']:
-    #     roic_pct = data['roic'] * 100 if data['roic'] is not None else None
-    #     print(f"{data['year'].year}: {roic_pct:.2f}%" if roic_pct else f"{data['year'].year}: N/A")
-    # print("\nGenerating ROIC visualization...")
-    # plot_roic_time_series("UNH", 4)
+    plot_roic_time_series("T", 4)

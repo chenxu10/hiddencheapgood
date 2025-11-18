@@ -9,5 +9,5 @@ dependencies = [
     "matplotlib>=3.9.4",
     "pytest-cov>=6.2.1",
     "tqdm>=4.66.0",
-    "yfinance>=0.2.65",
+    "yfinance==0.2.65",
 ]

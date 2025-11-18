@@ -19,14 +19,12 @@ Enter the required inputs when prompted:
 - Book Value per share
 - 1-Year US Treasury Yield (%)
 
--------------------------
-30-Year DCF Valuation Result
--------------------------
-EPS输入的每股收益: 5.25
-每股净资产: 45.30
-国债收益率: 4.5%
-年金现值因子: 16.2889
-折现后的DCF价值: 130.82
+It will output:
+- EPS输入的每股收益: 5.25
+- 每股净资产: 45.30
+- 国债收益率: 4.5%
+- 年金现值因子: 16.2889
+- 折现后的DCF价值: 130.82
 
 <a name="english"></a>
 # JiaGuoSuiShang

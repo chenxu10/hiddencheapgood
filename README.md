@@ -10,31 +10,15 @@
 目前的过滤指标是ROIC与PB。计算工具是未来现金流折现。
 
 Quick Start
-Make the script executable:
+```bash
+chmod +x dcf_valuation.sh ./dcf_valuation.sh
+```
 
-bash
-chmod +x dcf_valuation.sh
-Run the script:
-
-bash
-./dcf_valuation.sh
 Enter the required inputs when prompted:
+- Earnings Per Share (EPS)
+- Book Value per share
+- 1-Year US Treasury Yield (%)
 
-Earnings Per Share (EPS)
-
-Book Value per share
-
-1-Year US Treasury Yield (%)
-
-Example Usage
-bash
-$ ./dcf_valuation.sh
-Enter Earnings Per Share (EPS): 5.25
-Enter Book Value per share: 45.30
-Enter 1-Year US Treasury Yield (%): 4.5
-Output:
-
-text
 -------------------------
 30-Year DCF Valuation Result
 -------------------------
